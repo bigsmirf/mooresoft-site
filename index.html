@@ -1,62 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MooreSoft LIVE TEST</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MooreSoft</title>
+  <meta name="description" content="MooreSoft builds intelligent systems that launch faster, improve easier, and hide the chaos behind digital infrastructure." />
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       background: #0b0f1a;
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
     h1 {
-      font-size: 48px;
+      font-size: 52px;
       margin-bottom: 10px;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-top: 60px;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 22px;
     }
 
     p {
-      color: #9ca3af;
-      margin-bottom: 40px;
+      color: #b0b8d1;
+      line-height: 1.65;
+      font-size: 16px;
+      margin-top: 0;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+      background: linear-gradient(180deg, #0b0f1a 0%, #0f172a 100%);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #38bdf8;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .tagline {
+      font-size: 20px;
+      margin-top: 14px;
+      color: #38bdf8;
+      font-weight: 600;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+      margin: 18px auto 0;
     }
 
     .btn {
       display: inline-block;
-      margin: 10px;
-      padding: 15px 25px;
+      padding: 12px 22px;
+      margin: 10px 10px 0 0;
       background: #2563eb;
       color: white;
       text-decoration: none;
       border-radius: 8px;
-      font-size: 18px;
+      transition: 0.2s;
+      font-weight: 600;
     }
 
     .btn:hover {
       background: #1d4ed8;
     }
 
-    .test {
-      margin-top: 50px;
-      font-size: 14px;
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid #334155;
+    }
+
+    .btn-secondary:hover {
+      background: #111827;
+    }
+
+    .section {
+      margin-top: 64px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #111827;
+      padding: 22px;
+      border-radius: 14px;
+      transition: 0.2s;
+      border: 1px solid #1f2937;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      background: #162033;
+      border-color: #334155;
+    }
+
+    .status {
+      display: inline-block;
+      font-size: 12px;
+      margin: 10px 0 14px;
       color: #38bdf8;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .pain-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: #111827;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #1f2937;
+    }
+
+    .pain-table th,
+    .pain-table td {
+      text-align: left;
+      padding: 16px;
+      border-bottom: 1px solid #1f2937;
+      vertical-align: top;
+    }
+
+    .pain-table th {
+      color: #ffffff;
+      background: #0f172a;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .pain-table td {
+      color: #b0b8d1;
+    }
+
+    .pain-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .callout {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+
+    .callout strong {
+      color: #ffffff;
+    }
+
+    footer {
+      margin-top: 90px;
+      text-align: center;
+      font-size: 14px;
+      color: #6b7280;
+      padding-bottom: 40px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    @media (max-width: 800px) {
+      h1 {
+        font-size: 40px;
+      }
+
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 72px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <h1>MooreSoft LIVE</h1>
-  <p>If you see this page, GitHub is controlling the server.</p>
+  <div class="hero">
+    <div class="eyebrow">MooreSoft</div>
+    <h1>Build smarter. Launch faster. Improve easier.</h1>
+    <div class="tagline">Hide the chaos. Expose the solution.</div>
+    <p class="hero-copy">
+      MooreSoft creates intelligent systems that build, deploy, monitor,
+      repair, and improve software automatically — so users can focus on outcomes,
+      not infrastructure.
+    </p>
+    <a href="#products" class="btn">Explore Products</a>
+    <a href="#difference" class="btn btn-secondary">Why MooreSoft</a>
+  </div>
 
-  <a href="https://ridexi.com" class="btn">Visit RideXi</a>
-  <a href="https://mechanicshoppro.com" class="btn">Visit Mechanic Shop Pro</a>
+  <div class="container">
 
-  <div class="test">
-    VERSION: GITHUB-TEST-001
+    <div class="section">
+      <h2>Our Ecosystem</h2>
+      <p>
+        MooreSoft is building a network of platforms powered by intelligent systems.
+        Each product is designed to evolve, improve, and scale over time.
+      </p>
+
+      <div id="products" class="products">
+
+        <div class="card">
+          <h3>10Builder</h3>
+          <p>Build applications using AI prompts in minutes.</p>
+          <div class="status">Live / In Progress</div>
+          <a href="https://10builder.com" class="btn">Visit</a>
+        </div>
+
+        <div class="card">
+          <h3>PicsXi</h3>
+          <p>Creator platform for content, engagement, and monetization.</p>
+          <div class="status">Live</div>
+          <a href="https://picsxi.com" class="btn">Visit</a>
+        </div>
+
+        <div class="card">
+          <h3>RideXi</h3>
+          <p>Smart transportation platform.</p>
+          <div class="status">Live</div>
+          <a href="https://ridexi.com" class="btn">Visit</a>
+        </div>
+
+        <div class="card">
+          <h3>Mechanic Shop Pro</h3>
+          <p>Operations and workflow system for auto shops.</p>
+          <div class="status">Live</div>
+          <a href="https://mechanicshoppro.com" class="btn">Visit</a>
+        </div>
+
+        <div class="card">
+          <h3>Create Print Ship</h3>
+          <p>Print, merchandise, shipping, and fulfillment platform.</p>
+          <div class="status">Live</div>
+          <a href="https://createprintship.com" class="btn">Visit</a>
+        </div>
+
+        <div class="card">
+          <h3>MooreSoft OS</h3>
+          <p>Autonomous system that monitors and improves applications.</p>
+          <div class="status">Core System</div>
+        </div>
+
+        <div class="card">
+          <h3>MooreSoft Foundry</h3>
+          <p>AI system that generates full applications from prompts.</p>
+          <div class="status">In Development</div>
+        </div>
+
+        <div class="card">
+          <h3>MooreSoft Cloud</h3>
+          <p>Infrastructure layer for hosting and scaling applications globally.</p>
+          <div class="status">In Development</div>
+        </div>
+
+        <div class="card">
+          <h3>ClubOS</h3>
+          <p>Nightlife and venue management system.</p>
+          <div class="status">Concept</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="difference" class="section">
+      <h2>What Makes MooreSoft Different</h2>
+
+      <div class="two-col">
+        <div>
+          <p>
+            Traditional platforms stop after deployment. MooreSoft continues working.
+          </p>
+          <p>
+            Our systems monitor performance, detect issues, fix problems automatically,
+            and improve over time — reducing manual work and increasing reliability.
+          </p>
+          <div class="callout">
+            <strong>Unlike other platforms — we automate it for you.</strong>
+          </div>
+        </div>
+
+        <div>
+          <p>
+            Every frustrating thing builders normally deal with becomes a MooreSoft feature.
+          </p>
+        </div>
+      </div>
+
+      <table class="pain-table">
+        <thead>
+          <tr>
+            <th>What you deal with</th>
+            <th>What MooreSoft does</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DNS confusion</td>
+            <td>One-click domain connect</td>
+          </tr>
+          <tr>
+            <td>SSL headaches</td>
+            <td>Automatic HTTPS</td>
+          </tr>
+          <tr>
+            <td>Server setup</td>
+            <td>Hidden infrastructure</td>
+          </tr>
+          <tr>
+            <td>Propagation delays</td>
+            <td>Real-time connection status</td>
+          </tr>
+          <tr>
+            <td>Random platform errors</td>
+            <td>Auto-fix agents</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      © 2026 MooreSoft. All rights reserved.
+    </footer>
+
   </div>
 
 </body>
